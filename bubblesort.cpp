@@ -20,7 +20,7 @@ void printarr(int* arr,int len){
 
 // 采用两层循环实现的方法。
 // 参数arr是待排序数组的首地址，len是数组元素的个数。
-void bubblesort1(int *arr,unsigned int len){
+void bubblesort(int *arr,unsigned int len){
     if(arr == NULL) return;
     int ifswap; // 每趟排序过程中是否交换过元素，0-未交换；1-有交换。
     for(int i = 0;i < len;i++){
@@ -45,7 +45,7 @@ int main (){
     cout << "原数组：" <<endl;
     printarr(arr,15);
     cout << "冒泡排序后：" <<endl;
-    bubblesort1(arr,15);
+    bubblesort(arr,15);
     printarr(arr,15);
 
 

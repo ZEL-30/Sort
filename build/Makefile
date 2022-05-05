@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named selectsort
+
+# Build rule for target.
+selectsort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 selectsort
+.PHONY : selectsort
+
+# fast build rule for target.
+selectsort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/selectsort.dir/build.make CMakeFiles/selectsort.dir/build
+.PHONY : selectsort/fast
+
+#=============================================================================
 # Target rules for targets named bubblesort
 
 # Build rule for target.
@@ -153,6 +166,30 @@ bubblesort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubblesort.dir/build.make CMakeFiles/bubblesort.dir/bubblesort.cpp.s
 .PHONY : bubblesort.cpp.s
 
+selectsort.o: selectsort.cpp.o
+.PHONY : selectsort.o
+
+# target to build an object file
+selectsort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/selectsort.dir/build.make CMakeFiles/selectsort.dir/selectsort.cpp.o
+.PHONY : selectsort.cpp.o
+
+selectsort.i: selectsort.cpp.i
+.PHONY : selectsort.i
+
+# target to preprocess a source file
+selectsort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/selectsort.dir/build.make CMakeFiles/selectsort.dir/selectsort.cpp.i
+.PHONY : selectsort.cpp.i
+
+selectsort.s: selectsort.cpp.s
+.PHONY : selectsort.s
+
+# target to generate assembly for a file
+selectsort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/selectsort.dir/build.make CMakeFiles/selectsort.dir/selectsort.cpp.s
+.PHONY : selectsort.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bubblesort"
+	@echo "... selectsort"
 	@echo "... bubblesort.o"
 	@echo "... bubblesort.i"
 	@echo "... bubblesort.s"
+	@echo "... selectsort.o"
+	@echo "... selectsort.i"
+	@echo "... selectsort.s"
 .PHONY : help
 
 

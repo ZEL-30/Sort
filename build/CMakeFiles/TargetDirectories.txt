@@ -1,3 +1,4 @@
 /root/C++项目/Sort/build/CMakeFiles/edit_cache.dir
+/root/C++项目/Sort/build/CMakeFiles/selectsort.dir
 /root/C++项目/Sort/build/CMakeFiles/rebuild_cache.dir
 /root/C++项目/Sort/build/CMakeFiles/bubblesort.dir
