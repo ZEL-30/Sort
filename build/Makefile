@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named quicksort
+
+# Build rule for target.
+quicksort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quicksort
+.PHONY : quicksort
+
+# fast build rule for target.
+quicksort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quicksort.dir/build.make CMakeFiles/quicksort.dir/build
+.PHONY : quicksort/fast
+
+#=============================================================================
 # Target rules for targets named insertsort
 
 # Build rule for target.
@@ -203,6 +216,30 @@ insertsort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/insertsort.cpp.s
 .PHONY : insertsort.cpp.s
 
+quicksort.o: quicksort.cpp.o
+.PHONY : quicksort.o
+
+# target to build an object file
+quicksort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quicksort.dir/build.make CMakeFiles/quicksort.dir/quicksort.cpp.o
+.PHONY : quicksort.cpp.o
+
+quicksort.i: quicksort.cpp.i
+.PHONY : quicksort.i
+
+# target to preprocess a source file
+quicksort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quicksort.dir/build.make CMakeFiles/quicksort.dir/quicksort.cpp.i
+.PHONY : quicksort.cpp.i
+
+quicksort.s: quicksort.cpp.s
+.PHONY : quicksort.s
+
+# target to generate assembly for a file
+quicksort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quicksort.dir/build.make CMakeFiles/quicksort.dir/quicksort.cpp.s
+.PHONY : quicksort.cpp.s
+
 selectsort.o: selectsort.cpp.o
 .PHONY : selectsort.o
 
@@ -237,6 +274,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bubblesort"
 	@echo "... insertsort"
+	@echo "... quicksort"
 	@echo "... selectsort"
 	@echo "... bubblesort.o"
 	@echo "... bubblesort.i"
@@ -244,6 +282,9 @@ help:
 	@echo "... insertsort.o"
 	@echo "... insertsort.i"
 	@echo "... insertsort.s"
+	@echo "... quicksort.o"
+	@echo "... quicksort.i"
+	@echo "... quicksort.s"
 	@echo "... selectsort.o"
 	@echo "... selectsort.i"
 	@echo "... selectsort.s"

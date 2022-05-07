@@ -9,3 +9,7 @@ add_executable(bubblesort bubblesort.cpp)
 add_executable(selectsort selectsort.cpp)
 
 add_executable(insertsort insertsort.cpp)
+
+add_executable(quicksort quicksort.cpp)
+
+add_executable(mergesort mergesort.cpp)
