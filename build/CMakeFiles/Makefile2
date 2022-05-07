@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /root/C++项目/Sort/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/insertsort.dir/all
 all: CMakeFiles/selectsort.dir/all
 all: CMakeFiles/bubblesort.dir/all
 .PHONY : all
@@ -72,9 +73,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/insertsort.dir/clean
 clean: CMakeFiles/selectsort.dir/clean
 clean: CMakeFiles/bubblesort.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/insertsort.dir
+
+# All Build rule for target.
+CMakeFiles/insertsort.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/C++项目/Sort/build/CMakeFiles --progress-num=3,4 "Built target insertsort"
+.PHONY : CMakeFiles/insertsort.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/insertsort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/C++项目/Sort/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/insertsort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/C++项目/Sort/build/CMakeFiles 0
+.PHONY : CMakeFiles/insertsort.dir/rule
+
+# Convenience name for target.
+insertsort: CMakeFiles/insertsort.dir/rule
+.PHONY : insertsort
+
+# clean rule for target.
+CMakeFiles/insertsort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/clean
+.PHONY : CMakeFiles/insertsort.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/selectsort.dir
@@ -83,7 +111,7 @@ clean: CMakeFiles/bubblesort.dir/clean
 CMakeFiles/selectsort.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/selectsort.dir/build.make CMakeFiles/selectsort.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/selectsort.dir/build.make CMakeFiles/selectsort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/C++项目/Sort/build/CMakeFiles --progress-num=3,4 "Built target selectsort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/C++项目/Sort/build/CMakeFiles --progress-num=5,6 "Built target selectsort"
 .PHONY : CMakeFiles/selectsort.dir/all
 
 # Build rule for subdir invocation for target.

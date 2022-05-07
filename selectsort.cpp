@@ -37,7 +37,7 @@ int main(){
     int arr[] = {44,3,38,5,47,15,36,26,27,2,46,4,19,50,48};
     cout << "原数组：" <<endl;
     printarr(arr,15);
-    cout << "冒泡排序后：" <<endl;
+    cout << "选择排序后：" <<endl;
     selectsort(arr,15);
     printarr(arr,15);
 

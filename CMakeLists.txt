@@ -7,3 +7,5 @@ include_directories(include)
 add_executable(bubblesort bubblesort.cpp)
 
 add_executable(selectsort selectsort.cpp)
+
+add_executable(insertsort insertsort.cpp)

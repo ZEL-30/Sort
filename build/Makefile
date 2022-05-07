@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named insertsort
+
+# Build rule for target.
+insertsort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 insertsort
+.PHONY : insertsort
+
+# fast build rule for target.
+insertsort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/build
+.PHONY : insertsort/fast
+
+#=============================================================================
 # Target rules for targets named selectsort
 
 # Build rule for target.
@@ -166,6 +179,30 @@ bubblesort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubblesort.dir/build.make CMakeFiles/bubblesort.dir/bubblesort.cpp.s
 .PHONY : bubblesort.cpp.s
 
+insertsort.o: insertsort.cpp.o
+.PHONY : insertsort.o
+
+# target to build an object file
+insertsort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/insertsort.cpp.o
+.PHONY : insertsort.cpp.o
+
+insertsort.i: insertsort.cpp.i
+.PHONY : insertsort.i
+
+# target to preprocess a source file
+insertsort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/insertsort.cpp.i
+.PHONY : insertsort.cpp.i
+
+insertsort.s: insertsort.cpp.s
+.PHONY : insertsort.s
+
+# target to generate assembly for a file
+insertsort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertsort.dir/build.make CMakeFiles/insertsort.dir/insertsort.cpp.s
+.PHONY : insertsort.cpp.s
+
 selectsort.o: selectsort.cpp.o
 .PHONY : selectsort.o
 
@@ -199,10 +236,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bubblesort"
+	@echo "... insertsort"
 	@echo "... selectsort"
 	@echo "... bubblesort.o"
 	@echo "... bubblesort.i"
 	@echo "... bubblesort.s"
+	@echo "... insertsort.o"
+	@echo "... insertsort.i"
+	@echo "... insertsort.s"
 	@echo "... selectsort.o"
 	@echo "... selectsort.i"
 	@echo "... selectsort.s"
